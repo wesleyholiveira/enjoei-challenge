@@ -1,0 +1,16 @@
+.coupon {
+  margin: {
+    left: 20px;
+    right: 20px;
+  }
+  &__photo {
+    @extend .row;
+    margin: 40px;
+
+    &__image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+}

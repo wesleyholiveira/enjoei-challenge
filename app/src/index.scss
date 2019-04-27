@@ -1,0 +1,19 @@
+// Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Base styles
+@import 'sass/base/variables';
+@import 'sass/base/functions';
+@import 'sass/base/base';
+
+// Forms
+@import 'sass/form/form';
+
+// Components
+@import 'components/coupon/coupon';
+
+// Header style
+@import 'layout/header/header';
+
+// Main
+@import 'layout/main/main';

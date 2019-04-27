@@ -1,0 +1,12 @@
+.header {
+  border-bottom: 2px solid color(header, border-bottom);
+
+  &__logo {
+    padding: 10px;
+
+    &__image {
+      max-width: 100%;
+      height: 35px;
+    }
+  }
+}

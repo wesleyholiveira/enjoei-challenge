@@ -1,0 +1,18 @@
+// Grid settings
+$columns: 12;
+$gutter: 30px;
+
+
+// Colors
+$colors: (
+  header: (
+    border-bottom: #f4f2f0
+  ),
+  text: (
+    highlight: #5b5855,
+    base: #7d7a77
+  ),
+  radio: (
+    checked: #f77274
+  )
+);
