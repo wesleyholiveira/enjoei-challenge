@@ -1,20 +1,15 @@
 version: "3"
 services:
-  node:
-    image: "node:10"
-    user: "node"
+  server:
+    build: ./server
+    image: "enjoei-server"
     environment:
       - NODE_ENV=production
-    volumes:
-      - ./:/home/node/app
-    expose:
-      - "3000"
-    command: "node server.js"
+    ports:
+      - "3000:3000"
 
   app:
+    build: ./app
     image: "enjoei-app:latest"
-    volumes:
-      - ./:/home/node/app
-    expose:
-      - "3000"
-    command: "node server.js"
+    ports:
+     - "80:80"
