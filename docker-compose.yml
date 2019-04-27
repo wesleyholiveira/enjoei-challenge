@@ -1,0 +1,20 @@
+version: "3"
+services:
+  node:
+    image: "node:10"
+    user: "node"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "3000"
+    command: "node server.js"
+
+  app:
+    image: "enjoei-app:latest"
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "3000"
+    command: "node server.js"

@@ -46,21 +46,46 @@
     color: color(text, base);
   }
 
-  &__list {
-    border-color: color(header, border-bottom);
+  .list {
+    border-bottom: 1px solid color(header, border-bottom);
     &__summary {
       color: color(text, base);
       margin-bottom: 25px;
     }
   }
 
-  &__summary-text {
+  .summary-text {
     &::after {
       clear: both;
       display: block;
     }
     &--bold {
       font-weight: bold;
+    }
+  }
+
+  .btns-group {
+    width: 100%;
+    margin-top: 10px;
+    .btn {
+      border: 1px solid;
+      border-bottom: 2px solid;
+      width: calc(50% - 25px);
+      height: 50px;
+      margin-right: 25px;
+      background-color: transparent;
+      font-weight: bold;
+      border-radius: 5px;
+      &--cancel {
+        color: color(radio, checked);
+        background-color: #fff;
+        border-color: color(header, border-bottom);
+      }
+      &--confirm {
+        color: #ffffff;
+        background-color: color(radio, checked);
+        border-color: color(btn-confirm, border);
+      }
     }
   }
 }

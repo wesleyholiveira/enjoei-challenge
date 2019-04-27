@@ -1,0 +1,21 @@
+.modal-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .modal-icon {
+      display: block;
+  }
+
+  .modal__title {
+      color: darken(#000, 50%);
+      font-size: 30px;
+      margin-top: 20px;
+  }
+
+  .modal__text {
+      text-align: center;
+      font-size: 20px;
+  }
+}
