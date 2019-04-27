@@ -5,6 +5,7 @@ WORKDIR /enjoei-app/app
 
 RUN npm install && \
     npm install -g yarn && \
+    npm rebuild node-sass && \
     yarn build
 
 FROM nginx:1-alpine
