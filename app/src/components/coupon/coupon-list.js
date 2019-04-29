@@ -46,7 +46,7 @@ class CouponList extends Component {
         const { checkout } = properties;
         service.updateCheckout({
             id: checkout.id
-        }).then(() => console.log('Sucesso'), v => console.log(v));
+        }).then(() => console.log('Sucesso!!'), v => console.log(v));
     }
 
     render() {
@@ -90,14 +90,14 @@ class CouponList extends Component {
                             <span className="summary-text">total</span>
                             <span className="summary-text--bold form-group--right">R$ {totalPrice}</span>
                         </div>
-                    </div>
+                    </div>  
                     <div className="btns-group">
                         <button className="btn btn--cancel" data-toggle="modal" data-target="#cancelar">cancelar</button>
-                        <button className="btn btn--confirm" data-toggle="modal" data-target="#confirmar">confirmar</button>
+                        <button className="btn btn--confirm" data-toggle="modal" data-target="#confirmar" onClick={this.updateOrder()}>confirmar</button>
                     </div>
                 </div>
                 <BtnModal id="cancelar" isCancelled={true}  />
-                <BtnModal id="confirmar" isCancelled={false} onClick={this.updateOrder()} />
+                <BtnModal id="confirmar" isCancelled={false} />
             </div>
         );
     }
